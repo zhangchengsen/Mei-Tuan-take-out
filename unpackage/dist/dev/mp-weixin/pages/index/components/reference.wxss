@@ -1,0 +1,55 @@
+.prefer.data-v-2c020c68 {
+  margin: 30rpx;
+  margin-top: 0;
+}
+.prefer .pefer_title.data-v-2c020c68 {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.prefer .prefer_item .scroll.data-v-2c020c68 {
+  white-space: nowrap;
+  width: 100%;
+  height: 300rpx;
+}
+.prefer .prefer_item .scroll .prefer-dis.data-v-2c020c68 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.prefer .prefer_item .scroll .prefer-dis .prefer-view.data-v-2c020c68 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  width: 300rpx;
+  padding: 0 20rpx;
+}
+.prefer .prefer_item .scroll .prefer-dis .prefer-view.data-v-2c020c68:first-child {
+  padding: 0;
+}
+.prefer .prefer_item .scroll .prefer-dis .prefer-view image.data-v-2c020c68 {
+  height: 200rpx;
+  width: 300rpx;
+}
+.prefer .prefer_item .scroll .prefer-dis .prefer-view text.data-v-2c020c68 {
+  height: 45rpx;
+  font-size: 28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.prefer .prefer_item .scroll .prefer-dis .prefer-view text.data-v-2c020c68:last-child {
+  color: #C0C0C0;
+  font-size: 24rpx !important;
+}
+

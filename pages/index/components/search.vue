@@ -33,6 +33,7 @@
 				</block>
 			</view>
 		</view>
+		<!-- <uni-notice-bar single="true" text="小提醒"></uni-notice-bar> -->
 	</view>
 </template>
 
@@ -44,84 +45,84 @@
 				swiperLen:[""],
 				swiperList: [
 					[{
-							'img': '../../static/inster/meishi.png',
+							'img': '/static/inster/meishi.png',
 							'title': '美食'
 						},
 						{
-							'img': '../../static/inster/chaoshi.png',
+							'img': '/static/inster/chaoshi.png',
 							'title': '超市便利'
 						},
 						{
-							'img': '../../static/inster/shuiguo.png',
+							'img': '/static/inster/shuiguo.png',
 							'title': '蔬菜水果'
 						},
 						{
-							'img': '../../static/inster/meituan.png',
+							'img': '/static/inster/meituan.png',
 							'title': '美团专送'
 						},
 						{
-							'img': '../../static/inster/paotui.png',
+							'img': '/static/inster/paotui.png',
 							'title': '跑腿代购'
 						},
 						{
-							'img': '../../static/inster/yexiao.png',
+							'img': '/static/inster/yexiao.png',
 							'title': '夜宵'
 						},
 						{
-							'img': '../../static/inster/jintie.png',
+							'img': '/static/inster/jintie.png',
 							'title': '津贴联盟'
 						},
 						{
-							'img': '../../static/inster/pinping.png',
+							'img': '/static/inster/pinping.png',
 							'title': '甜点饮品'
 						},
 						{
-							'img': '../../static/inster/shaokao.png',
+							'img': '/static/inster/shaokao.png',
 							'title': '龙虾烧烤'
 						},
 						{
-							'img': '../../static/inster/dangao.png',
+							'img': '/static/inster/dangao.png',
 							'title': '甜蜜蛋糕'
 						}
 					],
 					[{
-							'img': '../../static/inster/hanbao.png',
+							'img': '/static/inster/hanbao.png',
 							'title': '汉堡披萨'
 						},
 						{
-							'img': '../../static/inster/liaoli.png',
+							'img': '/static/inster/liaoli.png',
 							'title': '日韩料理'
 						},
 						{
-							'img': '../../static/inster/malatang.png',
+							'img': '/static/inster/malatang.png',
 							'title': '麻辣烫'
 						},
 						{
-							'img': '../../static/inster/kuaican.png',
+							'img': '/static/inster/kuaican.png',
 							'title': '快食简餐'
 						},
 						{
-							'img': '../../static/inster/xianhua.png',
+							'img': '/static/inster/xianhua.png',
 							'title': '浪漫鲜花'
 						},
 						{
-							'img': '../../static/inster/lazi.png',
+							'img': '/static/inster/lazi.png',
 							'title': '无辣不欢'
 						},
 						{
-							'img': '../../static/inster/jiaozi.png',
+							'img': '/static/inster/jiaozi.png',
 							'title': '饺子馆'
 						},
 						{
-							'img': '../../static/inster/xiaochi.png',
+							'img': '/static/inster/xiaochi.png',
 							'title': '小吃馆'
 						},
 						{
-							'img': '../../static/inster/baofan.png',
+							'img': '/static/inster/baofan.png',
 							'title': '煲仔饭'
 						},
 						{
-							'img': '../../static/inster/qita.png',
+							'img': '/static/inster/qita.png',
 							'title': '其他'
 						}
 					]
@@ -130,15 +131,16 @@
 			}
 		},
 		created() {
+			//  轮播图下方小点的个数处理
 			while(this.swiperList.length > this.swiperLen.length)
 			{
 				this.swiperLen.push('')
 			}
-			console.log(this.swiperLen)
 		},
 		methods:{
 			pageChange(e)
 			{
+				// 小点随之点亮
 				this.num = e.detail.current;
 			}
 		}
@@ -150,7 +152,7 @@
 		font-size: 30upx;
 
 		.location {
-			margin-bottom: 10upx;
+			margin-bottom: 20upx;
 
 			image {
 				height: 35upx;
