@@ -2,7 +2,7 @@ view.data-v-8b3e5b4a {
   font-size: 30rpx;
 }
 view .location.data-v-8b3e5b4a {
-  margin-bottom: 10rpx;
+  margin-bottom: 20rpx;
 }
 view .location image.data-v-8b3e5b4a {
   height: 35rpx;
