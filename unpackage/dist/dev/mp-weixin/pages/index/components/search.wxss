@@ -1,0 +1,103 @@
+view.data-v-8b3e5b4a {
+  font-size: 30rpx;
+}
+view .location.data-v-8b3e5b4a {
+  margin-bottom: 10rpx;
+}
+view .location image.data-v-8b3e5b4a {
+  height: 35rpx;
+  width: 35rpx;
+}
+view .location text.data-v-8b3e5b4a {
+  padding: 10rpx 0;
+}
+view .search_input.data-v-8b3e5b4a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #eff3f4;
+  margin: 0 20rpx;
+  border-radius: 10rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+view .search_input image.data-v-8b3e5b4a {
+  height: 40rpx;
+  width: 40rpx;
+  padding: auto 0 auto 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+view .search_input input.data-v-8b3e5b4a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.swiper-view.data-v-8b3e5b4a {
+  position: relative;
+}
+.swiper-view swiper-item .swiper-item.data-v-8b3e5b4a {
+  margin: 10rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.swiper-view swiper-item .swiper-item .content-img.data-v-8b3e5b4a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 24rpx;
+}
+.swiper-view swiper-item .swiper-item .content-img .uploadImg.data-v-8b3e5b4a {
+  width: 40%;
+}
+.swiper-view swiper-item .swiper-item .content-img text.data-v-8b3e5b4a {
+  padding: 10rpx 0;
+}
+.swiper-view .instruct-view.data-v-8b3e5b4a {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 10%;
+  bottom: 10%;
+  left: 50%;
+  height: 10rpx;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.swiper-view .instruct-view view.data-v-8b3e5b4a {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  margin: 0 5rpx;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background-color: #999;
+  border-radius: 10rpx;
+}
+.swiper-view .active.data-v-8b3e5b4a {
+  background-color: #ffd833 !important;
+}
+
