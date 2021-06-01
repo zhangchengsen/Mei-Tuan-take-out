@@ -3,6 +3,7 @@
   "usingComponents": {
     "delicacy": "/pages/index/components/delicacy",
     "search": "/pages/index/components/search",
+    "rec": "/pages/index/components/rec",
     "reference": "/pages/index/components/reference",
     "take-out": "/pages/index/components/takeOut"
   }

@@ -1,0 +1,74 @@
+.warp .a.data-v-5cbce4b8 {
+  padding: 10rpx 0;
+  border-bottom: 2rpx solid #dedede;
+  height: 250rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.warp .a .l_img.data-v-5cbce4b8 {
+  width: 42%;
+  overflow: hidden;
+}
+.warp .a .l_img image.data-v-5cbce4b8 {
+  width: 300rpx;
+  height: 250rpx;
+  border-radius: 10rpx;
+}
+.warp .a .r_desc.data-v-5cbce4b8 {
+  width: 58%;
+  font-size: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.warp .a .r_desc .title.data-v-5cbce4b8 {
+  font-size: 36rpx;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.warp .a .r_desc .deli_deliPay_average.data-v-5cbce4b8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+.warp .a .r_desc .deli_deliPay_average text.data-v-5cbce4b8 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.warp .a .r_desc .costAndtime.data-v-5cbce4b8 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.warp .a .r_desc .label.data-v-5cbce4b8 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.warp .a .r_desc .label image.data-v-5cbce4b8 {
+  height: 30rpx;
+  width: 30rpx;
+}
+.warp .a .r_desc .label text.data-v-5cbce4b8 {
+  font-size: 30rpx;
+}
+
