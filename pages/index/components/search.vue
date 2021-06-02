@@ -4,7 +4,7 @@
 			<image src="../../../static/coen/dingwei.svg"></image>
 			<text>浙江杭州阿里巴巴滨江路2号</text>
 		</view>
-		<view class="search_input">
+		<view class="search_input" @click="navToSearch">
 			<image src="../../../static/coen/sousuo.svg" mode=""></image>
 			<input type="text" placeholder="麻辣香锅" disabled="true" />
 		</view>
@@ -142,6 +142,11 @@
 			{
 				// 小点随之点亮
 				this.num = e.detail.current;
+			},
+			navToSearch() {
+				uni.navigateTo({
+					url:"/pages/search/search",
+				})
 			}
 		}
 	}

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/order/order",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/search/search"
   ],
   "subPackages": [],
   "window": {
