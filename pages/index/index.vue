@@ -18,7 +18,7 @@
 	import takeOut from './components/takeOut.vue'
 	import {Get} from '../../api/request.js'
 	import {mapState} from 'vuex'
-	
+	const {log : l} = console
 	
 	export default {
 		data() {
@@ -38,8 +38,7 @@
 			reference,
 			takeOut
 		},
-		onLoad() {
-			
+		onLoad(options) {
 		},
 		onPageScroll(e) {
 			// console.log(e.scrollTop)
@@ -55,7 +54,6 @@
 			query.select('#boxFixed').boundingClientRect()
 			query.exec((res) => {
 				this.menutop = res[0].top
-				console.log(this.menutop)
 				this.topdata = res[0].top
 			})
 			this.nearFood()

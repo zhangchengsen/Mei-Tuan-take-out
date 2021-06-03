@@ -23,6 +23,13 @@
 			"style": {
 				"navigationBarTitleText": "搜索"
 			}
+		},
+		{
+			"path": "pages/takeout/takeout",
+			"style": {
+				"navigationBarTitleText": "下单",
+				"navigationBarBackgroundColor": "#fff829"
+			}
 		}
 	],
 	"globalStyle": {

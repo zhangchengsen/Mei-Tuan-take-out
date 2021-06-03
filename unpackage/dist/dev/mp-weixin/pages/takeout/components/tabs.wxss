@@ -1,0 +1,20 @@
+.wrap.data-v-d7961f74 {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.wrap text.data-v-d7961f74 {
+  font-size: 36rpx;
+  display: inline-block;
+  margin-left: 50rpx;
+}
+.wrap text.data-v-d7961f74:first-child {
+  margin-left: 20rpx;
+}
+.active.data-v-d7961f74 {
+  font-size: 42rpx;
+  font-weight: 700;
+  border-bottom: 4rpx solid #ffff1a;
+}
+

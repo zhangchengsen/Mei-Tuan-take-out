@@ -1,7 +1,7 @@
 <template>
 	<view class="warp">
 		<block v-for="(item,index) in foodList" :key="index">
-			<view class="a">
+			<view class="a" @click = "navToFood(item.openid)">
 				<view class="l_img">
 					<image :src="item.logo" mode="aspectFill"></image>
 				</view>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+	import {Post} from '../../../api/request.js'
 	export default {
 		props: {
 			foodList: Array
@@ -40,6 +41,13 @@
 
 			}
 
+		},
+		methods:{
+			navToFood(id) {
+				uni.navigateTo({
+					url:'/pages/takeout/takeout?id=' + id
+				})
+			}
 		}
 	}
 </script>

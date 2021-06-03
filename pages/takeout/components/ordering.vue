@@ -1,0 +1,264 @@
+<template>
+	<view class="wrap">
+		<view class="left">
+			<block v-for= "(item,index) in tabList" :key = "index">
+				<view :class = "{'active' : activeIndex == index}">{{item}}</view>
+			</block>
+		</view>
+		<view class="right">
+			<view class="title">
+				{{tabList[activeIndex]}}
+			</view>
+			<!-- 描述-->
+			<view class="inner_desc">
+				<!-- 图片 -->
+				<view class="img_wrap">
+					<image src="http://lstkk.oss-cn-beijing.aliyuncs.com/meituan/public/uploads/1583591740906.png" ></image>
+				</view>
+				<!-- 文字按钮 -->
+				<view class="r_desc">
+					<view class="desc_title">
+						狮子头
+					</view>
+					<view class="desc_label">
+						<block>
+							<text>卤蛋</text>
+							<text>实惠</text>
+						</block>
+					</view>
+					<view class="sale">
+						月销100
+					</view>
+					<!-- // 价格 折扣 数量 -->
+					<view class="cost_disc_num">
+						<view class="now_cost">
+							￥0.2
+						</view>
+						<view class="init_cost">
+							￥10
+						</view>
+						<view class="nums">
+							<text class="">
+								-
+							</text>
+							<text>1</text>
+							<text>+</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="fix">
+			<view class="imgWrap">
+				<view class="numbers" v-if="bought">
+					0
+				</view>
+				<image src="/static/coen/weigou.png" mode="widthFix" v-if = "!bought"></image>
+				<image src="/static/coen/yigou.png" mode="widthFix" v-else></image>
+			</view>
+			<view class="money">
+				<view class="m_top">
+					￥0.2
+				</view>
+				<view class="m_bottom">
+					另需配送费0.3元
+				</view>
+			</view>
+			<view class="total_cost">
+				还差0.8元
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				tabList:['盖浇饭','小吃','鸡鸭'],
+				activeIndex:0,
+				bought:false
+			}
+		}
+		
+	}
+</script>
+
+<style lang="less" scoped>
+	.active {
+		background-color: #fff !important;
+		font-weight: 700 !important;
+	}
+	.wrap{
+		display: flex;
+		justify-content: space-between;
+		.left{
+			width: 190upx;
+			color: #a8a8a8;
+			view{
+				background-color: #f1f1f1;
+				text-align: center;
+				font-size: 34upx;
+				height: 80upx;
+				line-height: 80upx;
+			}
+			
+			
+		}
+		.right{
+			margin-right: 10upx;
+			width: 72%;
+			.title{
+				height: 80upx;
+				line-height: 80upx;
+			}
+			// 图片文字按钮
+			.inner_desc{
+				display: flex;
+				.img_wrap{
+					image{
+						height: 220upx;
+						width: 220upx;
+						border-radius: 10upx;
+					}
+						
+				}
+				.r_desc{
+					width: 100%;
+					margin-left: 20upx;
+					font-size: 30upx;
+					
+					.desc_title{
+						font-size: 36upx;
+						font-weight: 700;
+						margin-top: 10upx;
+					}
+					.desc_label{
+						color:#5b5b5b;
+						margin-top: 10upx;
+						text{
+							margin-left: 20upx;
+							padding: 5upx;
+							text-align: center;
+							background-color: #f1f1f1;
+							&:first-child{
+								margin-left: 0;
+							}
+						}
+					}
+					.sale{
+						color:#a8a8a8;
+						margin-top: 10upx;
+					}
+					// 价格 折扣 数量
+					.cost_disc_num {
+						color:#8c8c8c;
+						display: flex;
+						margin-top: 10upx;
+						align-items: center;
+						.now_cost{
+							color:#ff9e2e;
+							font-size: 36upx;
+						}
+						.init_cost{
+							color:#8c8c8c;
+							margin: 20upx;
+							text-decoration: line-through;
+						}
+						.nums{
+							color:#8c8c8c;
+							display: flex;
+							width: 100%;
+							justify-content: space-between;
+							align-items: center;
+							text{
+								text-align: center;
+								line-height: 36upx;
+								font-size: 30upx;
+								&:first-child{
+									font-size: 36upx;
+									border: 2upx solid #C8C7CC;
+									width: 36upx;
+									height: 36upx;
+									border-radius: 36upx;
+								}
+								&:last-child{
+									font-size: 36upx;
+									width: 36upx;
+									height: 36upx;
+									background-color: #ffee31;
+									color:black;
+									border-radius: 36upx;
+								}
+							}
+						}
+					}
+				}
+				
+				
+			}
+		}
+		.fix{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: 130upx;
+			border-radius: 75upx;
+			background-color: #000;
+			display: flex;
+			margin: 0 50upx;
+			.imgWrap{
+				flex: 1.5;
+				.numbers{
+					position: fixed;
+					left: 160upx;
+					bottom: 50upx;
+					background-color: red;
+					width: 40upx;
+					font-size: 30upx;
+					text-align: center;
+					line-height: 40upx;
+					height: 40upx;
+					border-radius: 50%;
+					z-index: 3;
+				}
+				image{
+					position: fixed;
+					left: 80upx;
+					bottom: 10upx;
+					height: 150upx;
+					width: 120upx;
+					
+					
+				}
+			}
+			.money{
+				display: flex;
+				flex-direction: column;
+				flex: 3.2;
+				justify-content: center;
+				.m_top{
+					font-size: 36upx;
+					color: #FFFFFF;
+					
+				}
+				.m_bottom{
+					font-size: 32upx;
+					color:#aaaaaa;
+				}
+				
+			}
+			.total_cost{
+				flex: 2;
+				font-size: 34upx;
+				border-top-right-radius: 61upx;
+				border-bottom-right-radius: 61upx;
+				display: flex;
+				justify-content: center;
+				background-color: #ffe72a;
+				align-items: center;
+			}
+		}
+	}
+</style>

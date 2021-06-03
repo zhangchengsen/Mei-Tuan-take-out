@@ -1,3 +1,10 @@
+.noMes.data-v-4cedc0c6 {
+  font-size: 30rpx;
+  text-align: center;
+}
+.noMes image.data-v-4cedc0c6 {
+  width: 50%;
+}
 .search.data-v-4cedc0c6 {
   margin-top: 20rpx;
 }

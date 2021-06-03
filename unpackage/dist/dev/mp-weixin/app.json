@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/order/order",
     "pages/my/my",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/takeout/takeout"
   ],
   "subPackages": [],
   "window": {
@@ -37,6 +38,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

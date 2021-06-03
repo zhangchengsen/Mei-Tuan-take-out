@@ -5,9 +5,11 @@ Vue.use(Vuex)
 const foodData = {
 	foodList :[]
 }
+const clickTab = 0
 // 放到数据仓库
 const state = {
-	foodData
+	foodData,
+	clickTab
 }
 export default new Vuex.Store({
 	state,
@@ -24,5 +26,11 @@ export default new Vuex.Store({
 				foodList: data
 			}
 		}
+		,
+		changeClickTab(state,data)
+		{
+			state.clickTab = data
+		}
 	}
+	
 })

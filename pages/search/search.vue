@@ -12,7 +12,7 @@
 			<view class="history-label">
 				<!-- 历史记录 -->
 				<block v-for = "(item,index) in historyList" :key = "index">
-					<view>
+					<view @click = "searchData = item">
 						{{item}}
 					</view>
 					
@@ -22,7 +22,7 @@
 		<!-- 商品数据 -->
 		<view class="warp" v-if ="!noMes">
 			<block v-for="(item,index) in foodList" :key="index">
-				<view class="a">
+				<view class="a" @click="navToFood">
 					<view class="l_img">
 						<image :src="item.logo" mode="aspectFill"></image>
 					</view>
@@ -47,8 +47,11 @@
 				</view>
 			</block>
 		</view>
-		<view class="" v-else>
-			<uni-notice-bar single="" text="没有该类商品哦"></uni-notice-bar>
+		<view class="noMes" v-else>
+			<image src="/static/coen/meoyopu.png" mode="widthFix"></image>
+			<view class="">
+				没有该分类哦
+			</view>
 		</view>
 		<uni-popup ref="popup" type="dialog">
 		    <uni-popup-dialog  message="确定要删除吗"  @close="closeHis" @confirm="toRemove">
@@ -92,6 +95,7 @@
 			// uni 弹出框
 			// 搜索
 			async search(){
+				if(this.searchData.trim().length == 0) return
 				let data  = {
 					searchdata:this.searchData
 				}
@@ -103,7 +107,7 @@
 			// 键盘搜索
 			
 			submitSearch(e){
-				l(e.detail.value)
+				if(e.detail.value.trim().length == 0) return
 				let data = {
 					searchdata:e.detail.value
 				}
@@ -135,12 +139,25 @@
 				this.historyList = newHis
 				uni.setStorageSync('history',newHis)
 				l(uni.getStorageSync("history"))
+			},
+			// 到详情页面
+			navToFood() {
+				uni.navigateTo({
+					url:"/pages/takeout/takeout"
+				})
 			}
 		}
 	}
 </script>
 
 <style scoped lang = "less">
+	.noMes{
+		font-size: 30upx;
+		text-align: center;
+		image{
+			width: 50%;
+		}
+	}
 	.search {
 		margin-top: 20upx;
 		.searchInput{

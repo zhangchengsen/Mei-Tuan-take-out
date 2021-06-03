@@ -1,0 +1,24 @@
+.wrap .aWarp view.data-v-1e6a4df2 {
+  z-index: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100rpx;
+  font-size: 36rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 4px solid #d9d9d9;
+}
+.wrap .aWarp view.data-v-1e6a4df2:first-child {
+  border-top: 4px solid #d9d9d9;
+}
+.wrap .aWarp view image.data-v-1e6a4df2 {
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.wrap .aWarp view text.data-v-1e6a4df2 {
+  margin-left: 20rpx;
+}
+
