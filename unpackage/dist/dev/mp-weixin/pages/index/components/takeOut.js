@@ -177,7 +177,7 @@ var _request = __webpack_require__(/*! ../../../api/request.js */ 22); //
 //
 //
 //
-var _default = { props: { foodList: Array }, data: function data() {return {};}, methods: { navToFood: function navToFood(id) {uni.navigateTo({ url: '/pages/takeout/takeout?id=' + id });} } };exports.default = _default;
+var _default = { props: { foodList: Array }, data: function data() {return {};}, methods: { navToFood: function navToFood(id) {this.$store.commit('initClickTab');uni.navigateTo({ url: '/pages/takeout/takeout?id=' + id });} } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

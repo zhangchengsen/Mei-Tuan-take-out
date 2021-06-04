@@ -81,6 +81,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 =
+    _vm.all_cost - 0 < 1 ? Math.round((1 - (_vm.all_cost - 0)) * 100) : null
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0
+      }
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -187,15 +197,97 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-var _default =
+//
+//
+//
+//
+//
+//
+//
+var _console =
+console,l = _console.log;var _default =
 {
+  props: {
+    dishList: Array,
+    menuList: Array },
+
   data: function data() {
     return {
-      tabList: ['盖浇饭', '小吃', '鸡鸭'],
       activeIndex: 0,
-      bought: false };
+      bought: false,
+      newDishList: [],
+      buyList: [],
+      all_cost: 0,
+      all_nums: 0 };
 
-  } };exports.default = _default;
+  },
+  methods: {
+    changeTab: function changeTab(index) {
+      this.activeIndex = index;
+    },
+    // 点击加一
+    add: function add(item) {
+
+      var index = this.buyList.findIndex(function (v) {
+        return v._id == item._id;
+      });
+      if (index == -1)
+      {
+        item.nums += 1;
+        this.buyList.push(item);
+      } else
+      {
+        item.nums += 1;
+      }
+    },
+    // 点击减一
+    minus: function minus(item) {
+      var index = this.buyList.findIndex(function (v) {
+        return v._id == item._id;
+      });
+      if (index == -1)
+      {
+        return;
+      } else
+      {
+        if (this.buyList[index].nums == 1)
+        {
+          item.nums -= 1;
+          this.buyList.splice(index, 1);
+        } else
+
+        {
+          item.nums -= 1;
+        }
+      }
+    } },
+
+
+  filters: {},
+
+
+
+  computed: {
+    fatherToSon: function fatherToSon() {var _this = this;
+      var a = [];
+      this.dishList.forEach(function (item) {
+        if (item.optidata == _this.menuList[_this.activeIndex])
+        a.push(item);
+      });
+      this.newDishList = a;
+      l(a);
+    },
+    calcTotal: function calcTotal() {
+      var nums = 0;
+      var cost = 0;
+      this.buyList.forEach(function (v) {
+        nums += v.nums;
+        cost += v.nums * v.objdis.Discount;
+      });
+      this.all_nums = nums;
+      this.all_cost = Math.round(cost * 100) / 100;
+
+    } } };exports.default = _default;
 
 /***/ }),
 

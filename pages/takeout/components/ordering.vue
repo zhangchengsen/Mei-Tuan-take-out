@@ -1,29 +1,32 @@
 <template>
 	<view class="wrap">
 		<view class="left">
-			<block v-for= "(item,index) in tabList" :key = "index">
-				<view :class = "{'active' : activeIndex == index}">{{item}}</view>
+			<block v-for= "(item,index) in menuList" :key = "index">
+				<view :class = "{'active' : activeIndex == index}" @click="changeTab(index)">{{item}}</view>
 			</block>
 		</view>
+		
 		<view class="right">
 			<view class="title">
-				{{tabList[activeIndex]}}
+				{{menuList[activeIndex]}}
 			</view>
 			<!-- 描述-->
+			
+		<block v-for = "(item1,index1) in newDishList" :key = "index1">
+			
 			<view class="inner_desc">
 				<!-- 图片 -->
 				<view class="img_wrap">
-					<image src="http://lstkk.oss-cn-beijing.aliyuncs.com/meituan/public/uploads/1583591740906.png" ></image>
+					<image :src="item1.objdis.image" ></image>
 				</view>
 				<!-- 文字按钮 -->
 				<view class="r_desc">
 					<view class="desc_title">
-						狮子头
+						{{item1.objdis.input}}
 					</view>
 					<view class="desc_label">
-						<block>
-							<text>卤蛋</text>
-							<text>实惠</text>
+						<block v-for ="(item2,index2) in item1.objdis.tags" :key = "index">
+							<text>{{item2}}</text>
 						</block>
 					</view>
 					<view class="sale">
@@ -32,53 +35,134 @@
 					<!-- // 价格 折扣 数量 -->
 					<view class="cost_disc_num">
 						<view class="now_cost">
-							￥0.2
+							￥{{item1.objdis.Discount}}
 						</view>
 						<view class="init_cost">
-							￥10
+							￥{{item1.objdis.Price}}
 						</view>
 						<view class="nums">
-							<text class="">
+							<text class="" @click.stop="minus(item1)">
 								-
 							</text>
-							<text>1</text>
-							<text>+</text>
+							<text>{{item1.nums}}</text>
+							<text @click.prevent="add(item1)">+</text>
 						</view>
 					</view>
 				</view>
 			</view>
+		</block>
 		</view>
 		<view class="fix">
 			<view class="imgWrap">
-				<view class="numbers" v-if="bought">
-					0
+				<view class="numbers" v-if="all_nums">
+					{{all_nums}}
 				</view>
-				<image src="/static/coen/weigou.png" mode="widthFix" v-if = "!bought"></image>
+				<image src="/static/coen/weigou.png" mode="widthFix" v-if = "!all_nums"></image>
 				<image src="/static/coen/yigou.png" mode="widthFix" v-else></image>
 			</view>
 			<view class="money">
 				<view class="m_top">
-					￥0.2
+					￥{{all_cost }}
 				</view>
 				<view class="m_bottom">
 					另需配送费0.3元
 				</view>
 			</view>
-			<view class="total_cost">
-				还差0.8元
+			<view class="total_cost" v-if="all_cost - 0 < 1">
+				还差{{Math.round((1 - (all_cost - 0))*100)/100 }}元
+			</view>
+			<view class="total_cost" v-else>
+				去结算
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	const {log : l} = console
 	export default {
+		props:{
+			dishList:Array,
+			menuList:Array
+		},
 		data() {
 			return {
-				tabList:['盖浇饭','小吃','鸡鸭'],
 				activeIndex:0,
-				bought:false
+				bought:false,
+				newDishList:[],
+				buyList:[],
+				all_cost:0,
+				all_nums:0
 			}
+		},
+		methods:{
+			changeTab(index){
+				this.activeIndex = index
+			},
+			// 点击加一
+			add(item) {
+		
+				let index = this.buyList.findIndex(v=>{
+					return v._id == item._id
+				})
+				if(index == -1)
+				{
+					item.nums += 1
+					this.buyList.push(item)
+				}
+				else{
+					item.nums += 1
+				}
+			},
+			// 点击减一
+			minus(item) {
+				let index = this.buyList.findIndex(v=>{
+					return v._id == item._id
+				})
+				if(index == -1)
+				{
+					return 
+				}
+				else{
+					if(this.buyList[index].nums == 1)
+					{
+						item.nums -= 1
+						this.buyList.splice(index,1)
+					}
+					else
+					{
+						item.nums -= 1
+					}
+				}
+			},
+			
+		},
+		filters:{
+			
+		}
+		,
+		computed: 	{
+			fatherToSon() {
+				let a = []
+				this.dishList.forEach(item => {
+					if(item.optidata == this.menuList[this.activeIndex])
+					a.push(item)
+				})
+				this.newDishList = a
+				l(a)
+			},
+			calcTotal() {
+				let nums = 0;
+				let cost = 0;
+				this.buyList.forEach(v=>{
+					nums += v.nums
+					cost += v.nums * v.objdis.Discount
+				})
+				this.all_nums = nums
+				this.all_cost = Math.round(cost * 100)/100
+				
+			}
+			
 		}
 		
 	}
@@ -90,6 +174,7 @@
 		font-weight: 700 !important;
 	}
 	.wrap{
+		margin-bottom: 150upx;
 		display: flex;
 		justify-content: space-between;
 		.left{
@@ -214,7 +299,7 @@
 					position: fixed;
 					left: 160upx;
 					bottom: 50upx;
-					background-color: red;
+					background-color: #ff4c20;
 					width: 40upx;
 					font-size: 30upx;
 					text-align: center;

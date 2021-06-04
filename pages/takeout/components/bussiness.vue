@@ -43,6 +43,7 @@
 				width: 70%;
 				height: 120upx;
 				margin-left: 20upx;
+				border-radius: 10upx;
 			}
 		}
 		.r_desc{

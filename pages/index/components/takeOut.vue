@@ -44,6 +44,7 @@
 		},
 		methods:{
 			navToFood(id) {
+				this.$store.commit('initClickTab')
 				uni.navigateTo({
 					url:'/pages/takeout/takeout?id=' + id
 				})

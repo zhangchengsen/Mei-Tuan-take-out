@@ -16,6 +16,7 @@
   width: 70%;
   height: 120rpx;
   margin-left: 20rpx;
+  border-radius: 10rpx;
 }
 .wrap .r_desc.data-v-63563515 {
   display: -webkit-box;

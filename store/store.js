@@ -31,6 +31,11 @@ export default new Vuex.Store({
 		{
 			state.clickTab = data
 		}
+		,
+		initClickTab(state)
+		{
+			state.clickTab = 0
+		}
 	}
 	
 })

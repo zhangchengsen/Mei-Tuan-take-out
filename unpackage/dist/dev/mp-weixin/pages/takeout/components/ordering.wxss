@@ -3,6 +3,7 @@
   font-weight: 700 !important;
 }
 .wrap.data-v-0bf8a0c8 {
+  margin-bottom: 150rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -140,7 +141,7 @@
   position: fixed;
   left: 160rpx;
   bottom: 50rpx;
-  background-color: red;
+  background-color: #ff4c20;
   width: 40rpx;
   font-size: 30rpx;
   text-align: center;

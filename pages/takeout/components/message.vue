@@ -1,9 +1,9 @@
 <template>
 	<view class="wrap">
 		
-		<view class="label" @click = "sortLabel">
+		<view class="label" >
 			<block v-for = "(item,index) in label" :key = "index">
-				<text>{{item}}</text>
+				<text @click = "sortLabel(item,index)" :class = "{'active' : index == activeIndex}">{{item}}</text>
 			</block>
 		</view>
 		<block v-for = "(item,index) in comment" :key = "index">
@@ -36,27 +36,24 @@
 	let {log : l} = console
 	export default{
 		props:{
-			discussList:Array
+			discussList:Array,
+			comment:Array,
+			label:Array
 		},
 		data() {
 			return {
-				comment:[],
-				label:[]
+				activeIndex:0
 			}
 		},
 		methods:{
-			sortLabel() {
-				l(1)
+			sortLabel(msg,index) {
+				this.activeIndex = index
+				this.$parent.labelStateChange(msg)
 			}
 		},
 		computed:{
 			abc() {
-				let a = this.discussList.map(v=>v.messagedata)
-				this.comment = a
-				let b = this.discussList.map(v=>v.classmessage)
-				let c = Array.from(new Set(b))
-				c = c.filter(v=>v)
-				this.label = ['全部',...c]
+				
 			}
 		}
 		
