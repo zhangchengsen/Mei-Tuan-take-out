@@ -22,7 +22,7 @@
 		<!-- 商品数据 -->
 		<view class="warp" v-if ="!noMes">
 			<block v-for="(item,index) in foodList" :key="index">
-				<view class="a" @click="navToFood">
+				<view class="a" @click="navToFood(item.openid)">
 					<view class="l_img">
 						<image :src="item.logo" mode="aspectFill"></image>
 					</view>
@@ -141,9 +141,10 @@
 				l(uni.getStorageSync("history"))
 			},
 			// 到详情页面
-			navToFood() {
+			navToFood(id) {
+				this.$store.commit('initClickTab')
 				uni.navigateTo({
-					url:"/pages/takeout/takeout"
+					url:'/pages/takeout/takeout?id=' + id
 				})
 			}
 		}

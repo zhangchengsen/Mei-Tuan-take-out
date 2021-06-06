@@ -62,7 +62,7 @@
 			</view>
 			<view class="money">
 				<view class="m_top">
-					￥{{all_cost }}
+					￥{{all_cost}}
 				</view>
 				<view class="m_bottom">
 					另需配送费{{intro.physical}}元

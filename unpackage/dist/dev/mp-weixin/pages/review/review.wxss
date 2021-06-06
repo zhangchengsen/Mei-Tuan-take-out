@@ -1,0 +1,34 @@
+.wrap.data-v-743a7ac6 {
+  margin-top: 30rpx;
+  height: 620rpx;
+  background-color: #fff;
+}
+.wrap textarea.data-v-743a7ac6 {
+  padding: 20rpx;
+  height: 430rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #dedede;
+  font-size: 33rpx;
+}
+.wrap .submit.data-v-743a7ac6 {
+  text-align: center;
+  font-weight: 540;
+  color: white;
+  height: 80rpx;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  line-height: 80rpx;
+  margin-top: 40rpx;
+  background-color: #ffdc2b;
+}
+.wrap .mask.data-v-743a7ac6 {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+

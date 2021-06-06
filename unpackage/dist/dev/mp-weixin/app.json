@@ -5,7 +5,8 @@
     "pages/my/my",
     "pages/search/search",
     "pages/takeout/takeout",
-    "pages/buy/buy"
+    "pages/buy/buy",
+    "pages/review/review"
   ],
   "subPackages": [],
   "window": {
@@ -39,5 +40,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

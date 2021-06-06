@@ -149,7 +149,7 @@
 				})
 				setTimeout(function () {
 				  wx.hideLoading()
-				}, 2000)
+				}, 2500)
 				// ====
 				setTimeout(function () {
 					wx.showLoading({
@@ -161,11 +161,15 @@
 					  wx.showToast({
 					  	title:"支付成功!"
 					  })
+					  setTimeout(function () {
+						uni.switchTab({
+							url:"/pages/order/order"
+						})
+					  }, 1000)
 					  
 					}, 2000)
-				}, 2700)
+				}, 3000)
 				
-				l(res)
 			}
 		},
 		

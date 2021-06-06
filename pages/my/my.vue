@@ -12,6 +12,24 @@
 				<text>{{userMes.nickName}}</text>
 			</view>
 		</view>
+		<!-- <view class="mine">
+			<view class="">
+				<view class="">
+					介绍
+				</view>
+				<view class="">
+					>
+				</view>
+			</view>
+			<view class="">
+				<view class="">
+					关于
+				</view>
+				<view class="">
+					>
+				</view>
+			</view>
+		</view> -->
 				
 	</view>
 </template>

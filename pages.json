@@ -36,6 +36,12 @@
 			"style": {
 				"navigationBarTitleText": "购买"
 			}
+		},
+		{
+			"path": "pages/review/review",
+			"style": {
+				"navigationBarTitleText": "评论"
+			}
 		}
 	],
 	"globalStyle": {
@@ -67,6 +73,7 @@
 				"iconPath":"./static/tab/wodea.png",
 				"selectedIconPath":"./static/tab/wodeb.png"
 			}
+			
 		]
 	}
 }

@@ -17,3 +17,5 @@ wxml wxss wxjs 都是纯手撸的代码
 [![2QXugP.png](https://z3.ax1x.com/2021/06/02/2QXugP.png)](https://imgtu.com/i/2QXugP)
 [![2QXVNd.png](https://z3.ax1x.com/2021/06/02/2QXVNd.png)](https://imgtu.com/i/2QXVNd)
 [![2JxGxe.png](https://z3.ax1x.com/2021/06/04/2JxGxe.png)](https://imgtu.com/i/2JxGxe)
+[![2UBQc4.png](https://z3.ax1x.com/2021/06/06/2UBQc4.png)](https://imgtu.com/i/2UBQc4)
+[![2UBGH1.png](https://z3.ax1x.com/2021/06/06/2UBGH1.png)](https://imgtu.com/i/2UBGH1)
