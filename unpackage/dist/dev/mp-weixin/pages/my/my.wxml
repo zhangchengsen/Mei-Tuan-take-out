@@ -1,1 +1,1 @@
-<view>我的</view>
+<view class="wrap data-v-0be17cc6"><view class="user_wrap data-v-0be17cc6"><block wx:if="{{!userMes.nickName}}"><view class="login data-v-0be17cc6"><view class="data-v-0be17cc6">点击登录,一起分享与美食的喜悦吧!</view><button type="default" data-event-opts="{{[['tap',[['getUserProfile',['$event']]]]]}}" bindtap="__e" class="data-v-0be17cc6">去登录</button></view></block><block wx:else><view class="user data-v-0be17cc6"><image src="{{userMes.avatarUrl}}" class="data-v-0be17cc6"></image><text class="data-v-0be17cc6">{{userMes.nickName}}</text></view></block></view></view>

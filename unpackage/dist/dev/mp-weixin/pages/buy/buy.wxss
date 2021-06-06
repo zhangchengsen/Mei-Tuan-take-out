@@ -1,0 +1,179 @@
+.u.data-v-63838ed8 {
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+.wrap .user_mes.data-v-63838ed8 {
+  background-color: #fff;
+  margin: 0 20rpx;
+  margin-top: 30rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.wrap .user_mes .person.data-v-63838ed8 {
+  font-size: 36rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.08);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 140rpx;
+}
+.wrap .user_mes .person .logo.data-v-63838ed8 {
+  margin-left: 20rpx;
+  margin: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  width: 60rpx;
+}
+.wrap .user_mes .person .logo image.data-v-63838ed8 {
+  width: 40rpx;
+  height: 40rpx;
+}
+.wrap .user_mes .person .address.data-v-63838ed8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.wrap .user_mes .person .address .addr_bottom.data-v-63838ed8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.wrap .user_mes .person .address .addr_bottom view.data-v-63838ed8 {
+  padding-right: 20rpx;
+}
+.wrap .user_mes .instant.data-v-63838ed8 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 80rpx;
+}
+.wrap .user_mes .instant image.data-v-63838ed8 {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: 40rpx !important;
+  height: 40rpx !important;
+}
+.wrap .user_mes .instant view.data-v-63838ed8 {
+  font-size: 36rpx;
+  margin-left: 20rpx;
+}
+.wrap .food_cart.data-v-63838ed8 {
+  margin: 0 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.wrap .food_cart .aFood.data-v-63838ed8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.wrap .food_cart .aFood .img_wrap.data-v-63838ed8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 240rpx;
+  margin: 10rpx 20rpx;
+}
+.wrap .food_cart .aFood .img_wrap image.data-v-63838ed8 {
+  width: 220rpx;
+  height: 190rpx;
+}
+.wrap .food_cart .aFood .detail.data-v-63838ed8 {
+  font-size: 36rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap .food_cart .aFood .detail .detailFlex.data-v-63838ed8 {
+  font-weight: 540;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.wrap .food_cart .aFood .detail .detailFlex view.data-v-63838ed8 {
+  padding-right: 10rpx;
+}
+.wrap .food_cart .aFood .detail .nums.data-v-63838ed8 {
+  font-size: 30rpx;
+  color: #c5c5c5;
+}
+.wrap .addtional.data-v-63838ed8 {
+  background-color: #fff;
+  text-align: right;
+  height: 90rpx;
+  margin: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  padding-right: 20rpx;
+  line-height: 90rpx;
+  margin-bottom: 160rpx;
+}
+.wrap .fixed.data-v-63838ed8 {
+  background-color: #fff;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.wrap .fixed text.data-v-63838ed8 {
+  font-weight: 500;
+}
+.wrap .fixed button.data-v-63838ed8 {
+  width: 30%;
+  height: 80rpx;
+  font-size: 34rpx;
+  margin: 0;
+}
+.wrap .mask.data-v-63838ed8 {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+

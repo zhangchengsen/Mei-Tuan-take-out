@@ -4,7 +4,8 @@
     "pages/order/order",
     "pages/my/my",
     "pages/search/search",
-    "pages/takeout/takeout"
+    "pages/takeout/takeout",
+    "pages/buy/buy"
   ],
   "subPackages": [],
   "window": {

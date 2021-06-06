@@ -2,7 +2,7 @@
 	<view class="">
 		<bussiness :intro = "intro"  ></bussiness>
 		<tabs></tabs>
-		<ordering   v-if="clickTab == 0" :menuList = "menuList" :dishList = "dishList"></ordering>
+		<ordering   v-if="clickTab == 0" :menuList = "menuList" :dishList = "dishList" :intro = "intro"></ordering>
 		<message v-if = "clickTab == 1" :discussList = "discussList" :comment = "comment" :label="label"></message>
 		<introduce v-if = "clickTab == 2" :intro = "intro"></introduce>
 	</view>
@@ -47,7 +47,6 @@
 				}
 				let res = await Post('/forshop/getdishes',data)
 				this.dishList = res[1].data
-				l(this.dishList)
 				this.doDishesList()
 			},
 			// 处理商品信息
@@ -66,7 +65,7 @@
 				}
 				let res = await Post('/forshop/shop',data)
 				this.intro = res[1].data[0]
-				// l(this.intro)
+				l(this.intro)
 			},
 			async getDiscuss(id) {
 				let data = {

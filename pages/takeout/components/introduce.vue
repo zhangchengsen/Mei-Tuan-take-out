@@ -41,7 +41,7 @@
 			return {
 				
 			}
-		}
+		},
 	}
 </script>
 

@@ -65,37 +65,136 @@
 					￥{{all_cost }}
 				</view>
 				<view class="m_bottom">
-					另需配送费0.3元
+					另需配送费{{intro.physical}}元
 				</view>
 			</view>
-			<view class="total_cost" v-if="all_cost - 0 < 1">
-				还差{{Math.round((1 - (all_cost - 0))*100)/100 }}元
+			<view class="total_cost" v-if="all_cost - 0 < intro.delivering">
+				还差{{Math.round((intro.delivering - (all_cost - 0))*100)/100 }}元
 			</view>
-			<view class="total_cost" v-else>
+			<view class="total_cost" v-else @click="buyThis">
 				去结算
 			</view>
 		</view>
+		<!-- 模态框 -->
+		<uni-popup ref="popup" type="dialog">
+		    <uni-popup-dialog    @close="close" @confirm="buy">
+				<view>请先登录后再操作</view>
+			</uni-popup-dialog>
+		</uni-popup>
+		<HMmessages ref="HMmessages" @complete="HMmessages = $refs.HMmessages" @clickMessage="clickMessage"></HMmessages>
 	</view>
 </template>
 
 <script>
 	const {log : l} = console
+	import HMmessages from "@/components/HM-messages/HM-messages.vue"
+	import {Post} from '../../../api/request.js'
 	export default {
+		 components: {
+			 HMmessages
+		 },
 		props:{
 			dishList:Array,
-			menuList:Array
+			menuList:Array,
+			intro:Object
 		},
 		data() {
 			return {
 				activeIndex:0,
-				bought:false,
 				newDishList:[],
 				buyList:[],
 				all_cost:0,
-				all_nums:0
+				all_nums:0,
+				userMes:[]
 			}
 		},
-		methods:{
+		methods:{ 
+			//  携带商品参数 价格 logo 商家的openid openid 配送费  商家名称 点的数量 路由跳转
+			// uni 弹出框 ======
+			saveFoodList() {
+				let data = {
+					buyList:this.buyList,
+					all_cost:this.all_cost,
+					all_nums: this.all_nums,
+					userMes:this.userMes,
+					physical:this.intro.physical,
+					delivering:this.intro.delivering,
+					shop:this.intro.shop,
+					logo:this.intro.logo
+				}
+				uni.setStorageSync("allDetail",data)
+			},
+			// 无存 买
+			 buy(){
+				this.getUserProfile()
+				this.$refs.popup.close()
+				
+			},
+			close(){
+				this.$refs.popup.close()
+			},
+			buyThis(){
+				if(this.buyList.length == 0)
+				return uni.showToast({
+					title:"商品不能为空!",
+					icon:"none"
+				})
+				let a = uni.getStorageSync("userMes")
+				// 有储存
+				if(a.nickName )
+				{
+					this.userMes = a
+					uni.navigateTo({
+						url:'/pages/buy/buy'
+					})
+					this.saveFoodList()
+				}
+				else {
+					// 无存
+					this.$refs.popup.open()
+				}
+			},
+			// uni 弹出框
+			// 登录
+			getUserProfile(){
+				wx.getUserProfile({
+					desc:"获取个人信息",
+					success:(res)=>{
+						let {userInfo} = res
+						wx.login({
+							success:(res)=>{
+								if(res.code)
+								{
+									let data = {
+										appid :"wxd6ab9ce806919ea4",
+										secret:"48bdb1ce8f0d890cf65f17b3a071ef5e",
+										avatarUrl:userInfo.avatarUrl,
+										nickName:userInfo.nickName,
+										code:res.code
+									}
+									// 得到登录code
+									this.loginFunc(data)
+								}
+							}
+						})
+					},
+					fail:(res)=>{
+						l(res)
+					}
+				})
+			},
+			async loginFunc(data){
+				let res = await Post('/wxuser/wxlogin',data)
+				this.userMes = res[1].data.datas
+				uni.setStorageSync("userMes",this.userMes)
+				this.HMmessages.show('登录成功',{icon:'success',iconColor:"#1dff7b"})
+				this.saveFoodList()
+				uni.navigateTo({
+					url:'/pages/buy/buy'
+				})
+			}
+			,
+			// 登录
 			changeTab(index){
 				this.activeIndex = index
 			},
@@ -142,6 +241,7 @@
 		}
 		,
 		computed: 	{
+			
 			fatherToSon() {
 				let a = []
 				this.dishList.forEach(item => {
@@ -149,7 +249,6 @@
 					a.push(item)
 				})
 				this.newDishList = a
-				l(a)
 			},
 			calcTotal() {
 				let nums = 0;
@@ -160,6 +259,9 @@
 				})
 				this.all_nums = nums
 				this.all_cost = Math.round(cost * 100)/100
+				
+			},
+			toBuy() {
 				
 			}
 			

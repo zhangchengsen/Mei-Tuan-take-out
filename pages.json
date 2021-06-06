@@ -30,6 +30,12 @@
 				"navigationBarTitleText": "下单",
 				"navigationBarBackgroundColor": "#fff829"
 			}
+		},
+		{
+			"path": "pages/buy/buy",
+			"style": {
+				"navigationBarTitleText": "购买"
+			}
 		}
 	],
 	"globalStyle": {

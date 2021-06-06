@@ -1,0 +1,44 @@
+.wrap .user_wrap.data-v-0be17cc6 {
+  height: 350rpx;
+  background: -webkit-linear-gradient(bottom, #fffc8e 15%, #ffdc14 100%);
+  background: linear-gradient(to top, #fffc8e 15%, #ffdc14 100%);
+}
+.wrap .user_wrap .login.data-v-0be17cc6 {
+  text-align: center;
+}
+.wrap .user_wrap .login view.data-v-0be17cc6 {
+  padding-top: 100rpx;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 550;
+}
+.wrap .user_wrap .login button.data-v-0be17cc6 {
+  margin-top: 30rpx;
+  font-size: 38rpx;
+  border-radius: 50rpx;
+  width: 60%;
+  color: #fff;
+  background-color: #409EFF;
+}
+.wrap .user_wrap .user.data-v-0be17cc6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 100rpx;
+  padding-left: 80rpx;
+}
+.wrap .user_wrap .user image.data-v-0be17cc6 {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.wrap .user_wrap .user text.data-v-0be17cc6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-left: 30rpx;
+}
+
